@@ -1,0 +1,200 @@
+body {
+  font-size: 20px;
+  background-color: #FFFAF0; /* 薄いオレンジ色 */
+}
+
+
+
+@media (min-width: 800px) {
+  .text1 {
+    font-size: 50px; /* 画面幅が800px以上の場合は、フォントサイズを50pxに固定 */
+  }
+}
+
+
+/* ヘッダーのスタイル設定 */
+header {
+  background-color: #fba32f; /* オレンジ*/
+  color: white;
+  text-align: center;
+}
+
+
+
+
+/* フッターのスタイル設定 */
+footer {
+  background-color: #f97e12; /* オレンジ */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a, .footer img {
+  vertical-align: middle;
+}
+
+.logo {
+  width: 35px;
+  height: 34px;
+}
+
+
+
+
+button {
+  background-color: green;
+  font-size: 30px; /* フォントサイズを大きく */
+  color: white;
+  padding: 15px 30px; /* スマートフォンでタップしやすいサイズに */
+  font-size: 36px; /* 大きめのフォントサイズ */
+  border: none;
+  border-radius: 5px;
+  display: block; /* ボタンをブロックレベル要素として扱う */
+  width: 50%; /* 画面の幅の50%に設定 */
+  margin: 0 auto; /* 左右中央揃え */
+  cursor: pointer;
+
+}
+
+button:hover {
+  background-color: #e9b013; /* ホバー色を変更 */
+}
+.join_button {
+  background-color: green;
+  color: white;
+  padding: 20px 40px; /* スマートフォンでタップしやすいサイズに */
+  font-size: 36px; /* 大きめのフォントサイズ */
+  border: none;
+  border-radius: 5px;
+  display: block; /* ボタンをブロックレベル要素として扱う */
+  width: 50%; /* 画面の幅の50%に設定 */
+  margin: 0 auto; /* 左右中央揃え */
+  cursor: pointer;
+  text-align: center; /* テキストを中央揃え */
+  text-decoration: none; /* 下線を消す */
+
+}
+
+.join_button:hover {
+  background-color: #e9b013; /* ホバー色を変更 */
+}
+input[type="submit"] {
+  background-color: green;
+  color: white;
+  padding: 20px 20px; /* スマートフォンでタップしやすいサイズに */
+  font-size: 34px; /* 大きめのフォントサイズ */
+  border: none;
+  border-radius: 5px;
+  display: block; /* ボタンをブロックレベル要素として扱う */
+  width: 80%; /* 画面の幅の50%に設定 */
+  margin: 0 auto; /* 左右中央揃え */
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #e9b013; /* ホバー色を変更 */
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.blog_card {
+  flex: 1 1 45%; /* flex-grow, flex-shrink, flex-basis */
+  border: 1px solid #ccc; /* Light border */
+  margin: 10px; /* Set margin */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+  transition: all 0.3s ease-in-out; /* Animation effect */
+}
+
+.blog_card:hover {
+  border: 1px solid rgb(232, 103, 4); /* Border color on hover */
+  box-shadow: 0 0 10px rgb(232, 103, 4); /* Shadow effect on hover */
+}
+
+.blog_card .pict {
+  flex-basis: 100%; /* Image takes full width of the card */
+  text-align: center; /* Center align the image */
+}
+
+.blog_card_img {
+  width: 100%; /* Use the natural width of the image */
+  height: auto; /* Use the natural height of the image */
+}
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column; /* スマホ画面では縦並びに */
+  }
+
+  .blog_card {
+    flex-basis: 100%; /* スマホ画面では幅全体を使用 */
+  }
+}
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#drop-area:hover {
+  background-color: #f9f9f9;
+}
+
+.file-input-label {
+  color: blue;
+  text-decoration: underline;
+}
+
+#file-name {
+  margin-top: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+.event-card {
+    width: calc(50% - 20px); /* スマートフォンやタブレットでは2列に */
+}
+}
+
+@media (max-width: 480px) {
+.event-card {
+    width: 100%; /* とても小さい画面では1列に */
+}
+}
+
+
+/* スマートフォンや小さい画面サイズに適応するメディアクエリ */
+@media (max-width: 768px) {
+  body {
+      font-size: 20px; /* 小さい画面で読みやすいフォントサイズに */
+  }
+  .content, .message-box, .participant-list {
+      margin: 5px;
+      padding: 15px;
+  }
+  button {
+      padding: 10px; /* タッチしやすいように大きめのパディング */
+      font-size: 20px; /* ボタンのテキストサイズも読みやすく */
+  }
+}
+
+/* 大画面での表示を考慮したスタイル */
+@media (min-width: 769px) {
+  .content {
+      max-width: 600px; /* コンテンツの最大幅を制限 */
+      margin: auto; /* 中央寄せ */
+  }
+
+}
+
